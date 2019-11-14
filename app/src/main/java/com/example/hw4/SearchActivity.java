@@ -28,6 +28,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     Button buttonSearch;
     EditText editTextZipSearch;
     TextView textViewBird,textViewName;
+    //test
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

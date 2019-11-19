@@ -28,7 +28,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     Button buttonSearch;
     EditText editTextZipSearch;
     TextView textViewBird,textViewName;
-    //test
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,9 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         buttonSearch = findViewById(R.id.buttonSearch);
         buttonSearch.setOnClickListener(this);
 
+        editTextZipSearch = findViewById(R.id.editTextZipSearch);
+        textViewBird = findViewById(R.id.textViewBird);
+        textViewName = findViewById(R.id.textViewName);
     }
 
     @Override
@@ -85,7 +88,11 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
             });
         }
 
+        if (editTextZipSearch.getText().toString().trim().equalsIgnoreCase("")) {
+            editTextZipSearch.setError("This field can not be blank");
         }
+
+    }
 
 
 

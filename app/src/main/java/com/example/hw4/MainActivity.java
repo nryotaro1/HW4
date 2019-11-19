@@ -51,6 +51,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             myRef.push().setValue(createBirds);
         }
+
+
+        if (editTextBird.getText().toString().trim().equalsIgnoreCase("")) {
+            editTextBird.setError("This field can not be blank");
+        }
+
+        if (editTextZip.getText().toString().trim().equalsIgnoreCase("")) {
+            editTextZip.setError("This field can not be blank");
+        }
+
+        if (editTextName.getText().toString().trim().equalsIgnoreCase("")) {
+            editTextName.setError("This field can not be blank");
+        }
+
     }
 
 
@@ -68,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         if(item.getItemId() == R.id.itemRegister){
-            Toast.makeText(this, "You are already in Register page, you fool!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "You are already in Report page, you fool!", Toast.LENGTH_SHORT).show();
 
 
         } else if(item.getItemId() == R.id.itemSearch) {

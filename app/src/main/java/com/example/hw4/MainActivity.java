@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         buttonSubmit = findViewById(R.id.buttonSubmit);
 
         editTextBird = findViewById(R.id.editTextBird);
@@ -42,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         DatabaseReference myRef = database.getReference("mybirds");
 
         if (view == buttonSubmit) {
-
+//I used on purpose "inputtype = number" not integer constraints to remove the risk of misinput by user.
             String createBird = editTextBird.getText().toString();
             String createZip = editTextZip.getText().toString();
             String createName = editTextName.getText().toString();
